@@ -23,7 +23,7 @@ Route::get('Logout', 'LoginController@logout');
 
 Route::get('/', function () {
     $allMatchBet = DB::table('allmatchbet')->get();
-//    \Log::info($allMatchBet->all());
+    \Log::info($allMatchBet->all());
     return view('pages.home', ['allMatchBet' => $allMatchBet]);
 })->name('home');
 
